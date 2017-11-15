@@ -1,0 +1,80 @@
+/**
+-- Pseudo-classes et classes utiles --
+**/
+
+%block_marginBottom {
+  margin: 0 0 $padding/2;
+  @include respond-to(sm) {
+    margin: 0 0 $padding*0.75;
+  }
+  @include respond-to(md) {
+    margin: 0 0 $padding;
+  }
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_faded {
+  color: $text-faded-color;
+}
+
+.text_bold {
+  font-weight: bold;
+}
+
+.text_italic {
+  font-style: italic;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.list_unstyled,
+%list_unstyled {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $border-color;
+  margin: $padding 0;
+}
+
+.a11y-sr-only,
+.a11y-kb-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.a11y-kb-only:active,
+.a11y-kb-only:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}

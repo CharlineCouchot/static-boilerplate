@@ -1,0 +1,44 @@
+//**
+// Paramètres du projet
+//**
+
+// Paramètres récurrents
+$system-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$padding: 20px;
+//$primary-font:;
+
+
+
+// Breakpoints responsive
+// Usage : @include respond-to(xs), @include respond-to(sm), @include respond-to(md), @include respond-to(lg)
+$breakpoints: (
+  'xs' :  ( max-width:  767px ),
+  'sm' :  ( min-width:  768px ),
+  'md' :  ( min-width:  992px ),
+  'lg' :  ( min-width: 1200px )
+) !default;
+
+
+
+// Variables de couleurs
+// ----------------------------
+
+// Couleurs du projet
+$primary-color: #1271db;
+$secondary-color: #233e5b;
+$tertiary-color: #aaa;
+
+$error-color:red;
+$valid-color:green;
+
+// Gris
+$white:  #fff;
+$silver: #ddd;
+$grey:   #aaa;
+$black:  #111;
+
+// Couleurs d'éléments
+$text-color: #111;
+$text-faded-color: lighten($text-color, 50%);
+
+$border-color: $grey;

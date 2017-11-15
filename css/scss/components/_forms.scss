@@ -1,0 +1,72 @@
+/**
+-- Éléments de formulaire --
+**/
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=password],
+input[type=number],
+input[type=search],
+textarea {
+  .field & {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .05);
+    border-radius: 3px;
+    border: 1px solid $border-color;
+    outline: none;
+    padding: 5px 10px;
+    width: 300px;
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  .field_full-width & {
+    width: 100%;
+  }
+}
+
+form {
+  @extend %block_marginBottom;
+
+  // Chaque élément doit être entouré d'un conteneur div.field
+  .field {
+    margin-bottom: $padding/2;
+  }
+
+  // Les détails de l'input vont dans un conteneur sous l'input portant la classe .field__input
+  .field__hint {
+    color: $text-faded-color;
+    margin-top: 5px;
+  }
+
+  // Marquer les champs requis avec cette classe sur le conteneur .field
+  .field_isRequired {
+    font-style: italic;
+  }
+
+  // Marquer les champs erronés avec cette classe sur le conteneur .field
+  .field_hasError {
+
+    // Conteneur de la description de l'erreur
+    .field__errorDescription {
+      color: $error-color;
+      margin-top: 5px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=phone],
+    input[type=password],
+    input[type=number],
+    input[type=search],
+    textarea {
+      border-color: $error-color;
+    }
+  }
+}

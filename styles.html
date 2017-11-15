@@ -1,0 +1,243 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7 no-js"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="fr"><!--<![endif]-->
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Boilerplate statique</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    (function(e) {
+      e.className = e.className.replace('no-js', 'js');
+    }(document.documentElement));
+  </script>
+
+  <!--[if lt IE 9]>
+  <script>
+      (function (d, a) {
+          d.documentElement.className = 'lt-ie9'; var l = a.length; while(l--){ d.createElement(a[l]); }
+      }(document, ['HEADER', 'NAV', 'SECTION', 'FOOTER', 'ARTICLE', 'MAIN', 'FIGCAPTION', 'FIGURE', 'ASIDE']));
+  </script>
+  <![endif]-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+  <!--[if lt IE 9]> <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Titre 1</h1>
+		<h2>Titre 2</h2>
+		<h3>Titre 3</h3>
+		<h4>Titre 4</h4>
+		<h5>Titre 5</h5>
+		<p>Paragraphe</p>
+		<p class="text_faded">Texte subtile (comme le petit insecte)</p>
+		<p><a href="">Lien</a></p>
+		<blockquote>
+      <p>Mais que vous en né nenni. Opterez vous pour un printemps gracieux et fraîche comme l’ondée ?</p>
+      <cite>Yvain</cite>
+    </blockquote>
+		<pre>&lt;script&gt;Un petit script pas piqué des hannetons&lt;/script&gt;</pre>
+		<p>Un morceau de <code>&lt;code inline&gt;</code> pour l'exemple.</p>
+
+		<hr>
+
+		<h2>Boutons</h2>
+
+		<p>
+      <button class="btn btn_primary">Primary button</button>
+      <button class="btn">Default button</button>
+      <button class="btn btn_link">Link button</button>
+    </p>
+
+		<hr>
+
+		<h2>Listes</h2>
+		<ul>
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<li>Option 3</li>
+		</ul>
+		<ol>
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<li>Option 3</li>
+		</ol>
+		<ul class="list_unstyled">
+			<li>Option 1</li>
+			<li>Option 2</li>
+			<li>Option 3</li>
+		</ul>
+
+		<hr>
+
+		<h2>Navigation</h2>
+		<nav>
+			<a href="">Élément 1</a>
+			<a href="">Élément 2</a>
+			<a href="">Élément 3</a>
+		</nav>
+
+		<hr>
+
+		<h2>Tableaux</h2>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Colonne 1</th>
+					<th scope="col">Colonne 2</th>
+					<th scope="col" class="text-right">Colonne 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Donnée 1</td>
+					<td>Donnée 2</td>
+					<td class="text-right">Donnée 3</td>
+				</tr>
+				<tr>
+					<td>Donnée 1</td>
+					<td>Donnée 2</td>
+					<td class="text-right">Donnée 3</td>
+				</tr>
+				<tr>
+					<td>Donnée 1</td>
+					<td>Donnée 2</td>
+					<td class="text-right">Donnée 3</td>
+				</tr>
+				<tr>
+					<td>Donnée 1</td>
+					<td>Donnée 2</td>
+					<td class="text-right">Donnée 3</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+
+		<h2>Formulaires</h2>
+		<form>
+			<div class="field">
+				<label for="">Label textuel</label>
+				<input type="text">
+				<p class="hint">Indice/aide</p>
+			</div>
+			<div class="field">
+				<label for="">Email</label>
+				<input type="email">
+			</div>
+			<div class="field">
+				<label for="">Recherche</label>
+				<input type="search">
+			</div>
+			<div class="field">
+				<label for="">Mot de passe <span class="is-required">(requis)</span></label>
+				<input type="password">
+			</div>
+			<div class="field has-error">
+				<label for="">Label textuel <span class="req">(requis)</span></label>
+				<input type="text">
+				<p class="error-description">Ce champ est requis</p>
+			</div>
+			<div class="field">
+				<label for="">Textarea</label>
+				<textarea></textarea>
+			</div>
+			<div class="field field_full-width">
+				<label for="">Largeur 100%</label>
+				<input type="text">
+			</div>
+			<div class="field">
+				<label><input type="checkbox"> Option 1</label>
+				<label><input type="checkbox"> Option 2</label>
+				<label><input type="checkbox"> Option 3</label>
+			</div>
+			<div class="field">
+				<label><input type="radio" name="radio"> Option 1</label>
+				<label><input type="radio" name="radio"> Option 2</label>
+				<label><input type="radio" name="radio"> Option 3</label>
+			</div>
+			<button class="btn ">Envoyer</button>
+		</form>
+		<input type="text"> <button class="btn btn_primary">Envoyer</button>
+
+		<hr>
+
+		<h2>Images</h2>
+		<!-- Exemple utilisant l'élément picture -->
+		<div class="group">
+			<div class="span12">
+				<picture>
+					<source media="(min-width: 1000px)" srcset="img/cat@2x.jpg">
+					<source media="(min-width: 640px)" srcset="img/cat.jpg">
+					<img src="img/cat@2x.jpg" alt="Cat">
+				</picture>
+			</div>
+		</div>
+
+		<!-- Exemples utilisant srcset -->
+		<div class="group">
+			<div class="span6">
+				<img src="img/cat.jpg" alt="Cat" srcset="img/cat@2x.jpg 2x, img/cat.jpg 1x" sizes="(min-width:480px) 100vw, 50vw">
+			</div>
+			<div class="span4">
+				<img src="img/cat.jpg" alt="Cat" srcset="img/cat@2x.jpg 2x, img/cat.jpg 1x" sizes="(min-width:480px) 100vw, 50vw">
+			</div>
+			<div class="span2">
+				<img src="img/cat.jpg" alt="Cat" srcset="img/cat@2x.jpg 2x, img/cat.jpg 1x" sizes="(min-width:480px) 100vw, 50vw">
+			</div>
+		</div>
+
+		<hr>
+
+		<h2>Icônes</h2>
+
+		<i class="fa fa-cog"></i>
+		<i class="fa fa-download-alt fa-3x"></i>
+		<i class="fa fa-github-alt fa-rotate-90"></i>
+		<i class="fa fa-remove-sign fa-5x"></i>
+		<i class="fa fa-apple"></i>
+		<i class="fa fa-android fa-muted"></i>
+		<i class="fa fa-cloud fa-border"></i>
+		<i class="fa fa-comment"></i>
+		<i class="fa fa-star"></i>
+		<i class="fa fa-gamepad"></i>
+
+		<p><a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/">Liste complète</a></p>
+
+
+	</div>
+
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+  </script>
+  <script src="js/scripts.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+    window.ga = function() {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+//**
+// Mixins du projet
+//**
+
+// Clearfix
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+.clearfix {
+  @include clearfix;
+}
+
+
+
+// Usage : @include font-face($style-name, $folder-name, $file-name, $weight, $style);
+@mixin font-face($style-name, $folder-name, $file-name, $weight:"", $style:"") {
+  $filepath: "../fonts/" + $folder-name + "/" + $file-name;
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+         url($filepath + ".woff") format('woff'),
+         url($filepath + ".woff2") format('woff2'),
+         url($filepath + ".ttf")  format('truetype'),
+         url($filepath + ".svg#" + $style-name + "") format('svg');
+    @if $weight != "" {
+      font-weight: #{$weight};
+    } @else {
+      font-weight: normal;
+    }
+    @if $style != "" {
+      font-style: "#{$style}";
+    } @else {
+      font-style: normal;
+    }
+  }
+}
+
+
+
+// Usage : @include respond-to()
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Malheureusement, aucune valeur n'a pu être récupérée dans `#{$breakpoint}`. "
+      + "Les breakpoints disponibles sont: #{map-keys($breakpoints)}.";
+  }
+}
